@@ -51,7 +51,11 @@ inline void lisp_error(const char *error);
 
 namespace detail {
 
+#ifdef _WIN64
+CLCXX_API char *str_dup(const char *src);
+#else
 char *str_dup(const char *src);
+#endif
 char *str_append(char *old_str, const char *src);
 
 template <typename T>

@@ -34,6 +34,7 @@ bin
 pod-build
 /BUILD
 /build
+/build-1
 cmake-build-*
 .#*
 .cproject

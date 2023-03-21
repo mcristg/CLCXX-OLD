@@ -23,7 +23,11 @@ namespace clcxx {
 // (:array :int 10)
 // for nonPOD struct, class, pointer
 
+#ifdef _WIN64
+CLCXX_API std::string class_name(std::type_index i);
+#else
 std::string class_name(std::type_index i);
+#endif	
 inline void lisp_error(const char *error);
 
 extern "C" typedef union {
